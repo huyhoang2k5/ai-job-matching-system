@@ -1,0 +1,43 @@
+CHuyên ngành
+
+cd C:\Users\lnhho\job-backend
+npm.cmd start
+
+cd C:\Users\lnhho\job-frontend
+npm.cmd run dev
+
+
+cd C:\Users\lnhho\cv-ai-service
+python -m uvicorn main:app --host 0.0.0.0 --port 8000
+
+
+chuyên đề
+
+
+cd C:\Users\lnhho\Desktop\course-certificate-blockchain\server
+npm.cmd run dev
+
+cd C:\Users\lnhho\Desktop\course-certificate-blockchain\client
+npm.cmd start
+
+
+Chỉ khi Ganache bị reset/mất contract thì chạy thêm ở thư mục gốc project:
+
+
+cd C:\Users\lnhho\Desktop\course-certificate-blockchain
+truffle migrate --reset --network development
+copy build\contracts\CourseCertificate.json client\src\contracts\CourseCertificate.json
+
+truffle exec scripts\sync_courses_from_api.js --network development
+truffle exec scripts\sync_certificates_from_api.js --network development
+
+
+ML
+
+cd /d "C:\Users\lnhho\Downloads\face_attendance_system (2)\face_attendance_system" && php -S 127.0.0.1:8010
+
+
+Ctrl + C
+
+
+

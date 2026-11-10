@@ -1,0 +1,319 @@
+{
+  "info": {
+    "_postman_id": "90bdf330-a976-4d12-954c-ac5fbbf4379e",
+    "name": "Job Matching API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24063782",
+    "_collection_link": "https://go.postman.co/collection/44746549-90bdf330-a976-4d12-954c-ac5fbbf4379e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "register",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3001/api/auth/login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"nhatuyendung@gmail.com\",\r\n  \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3001/api/cv/upload",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmRjNmQwMDgxMmNiOGFhMWJhMTMzMSIsImlhdCI6MTc3ODIzOTkzMCwiZXhwIjoxNzc4ODQ0NzMwfQ.s1hxE3vX-Ei3g1iB0ALDK2AVCjwYrqqaBnD0l6iyx-I",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "cv",
+              "type": "file",
+              "uuid": "edd975e6-ee62-4c8b-a249-0168853d7720",
+              "src": "/D:/2. Dự án phần mềm/Hệ thống tuyển dụng AI (Job Matching)/CV mẫu test AI/CV mẫu - Frontend Developer.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/cv/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "cv",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3001/api/employer/profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmRmMjhiMzhkNjE5ZDJlZmM3N2NiZSIsImlhdCI6MTc3ODI1MDQwMSwiZXhwIjoxNzc4ODU1MjAxfQ.LlZJgeylAHpFn2OJbvsT1tIg8nte6u6JHrRD3ZBoW5E",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"companyName\": \"Công ty TNHH Tech ABC\",\r\n  \"website\": \"https://techabc.com\",\r\n  \"location\": \"Đà Nẵng\",\r\n  \"description\": \"Chúng tôi là công ty công nghệ hàng đầu, chuyên cung cấp các giải pháp AI và Backend.\",\r\n  \"industry\": \"Technology\",\r\n  \"companySize\": \"11-50\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/employer/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "employer",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3001/api/employer/jobs",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmRmOTc3MzhkNjE5ZDJlZmM3N2NkYiIsImlhdCI6MTc3ODI1MzI5MSwiZXhwIjoxNzc4ODU4MDkxfQ.T4ITXr5c-lofGjcmbQIa2abzqAImeF983tS7WfaCewo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Lập trình viên Backend Node.js\",\r\n  \"description\": \"Làm việc với Express, MongoDB và dự án có sử dụng AI tích hợp.\",\r\n  \"salaryMin\": 15000000,\r\n  \"salaryMax\": 25000000,\r\n  \"location\": \"Đà Nẵng\",\r\n  \"skills\": [\"Node.js\", \"MongoDB\", \"Express\", \"REST API\"],\r\n  \"type\": \"full-time\",\r\n  \"experienceLevel\": \"junior\",\r\n  \"deadline\": \"2026-12-31T23:59:59.000Z\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/employer/jobs",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "employer",
+            "jobs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3001/api/auth/register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"CEO Tech ABC\",\r\n  \"email\": \"ceo_abc@gmail.com\",\r\n  \"password\": \"password123\",\r\n  \"role\": \"employer\" \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3001/api/auth/login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"ceo_abc@gmail.com\",\r\n  \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3001/api/employer/profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmRmOTc3MzhkNjE5ZDJlZmM3N2NkYiIsImlhdCI6MTc3ODI1MjQ2NywiZXhwIjoxNzc4ODU3MjY3fQ.bc53pkZ8DAUAEE8XOzqYaNwvpJOEu0t9lXSwD4HF4UU",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"companyName\": \"Tech ABC Global\",\r\n  \"website\": \"https://techabc.com\",\r\n  \"location\": \"Đà Nẵng\",\r\n  \"description\": \"Công ty công nghệ hàng đầu.\",\r\n  \"industry\": \"Technology\",\r\n  \"companySize\": \"11-50\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/employer/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "employer",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:3001/api/messages/rooms",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "69fdc6d00812cb8aalba1331",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"participantId\": \"69fdc6d00812cb8aalba1331\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/messages/rooms",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "messages",
+            "rooms"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
